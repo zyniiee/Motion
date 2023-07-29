@@ -1,0 +1,141 @@
+footer {
+  top: auto;
+  .footer_cover {
+    border-top: 2px solid;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+    border-bottom: 2px solid;
+    .footer_logo {
+      padding: 3vw;
+      border-right: 2px solid;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      &-img {
+        img {
+          width: 5vw;
+        }
+      }
+    }
+    .footer_sns {
+      border-right: 2px solid;
+      text-align: center;
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      a {
+        display: flex;
+        padding: 3vw;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid;
+        transition: all 0.3s ease-in-out;
+        &:last-child {
+          border: none;
+        }
+        &:hover {
+          background-color: $orange-cl;
+          color: $light-cl;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+    .footer_contact {
+      padding: 3vw;
+      width: 100%;
+
+      form {
+        input {
+          border: none;
+          background-color: transparent;
+          border-bottom: 2px solid $orange-cl;
+          color: $orange-cl;
+          font-family: "body_font";
+
+          &:focus {
+            outline: none;
+          }
+        }
+        textarea {
+          border: none;
+          background-color: transparent;
+          border-bottom: 2px solid $orange-cl;
+          width: 100%;
+          color: $orange-cl;
+          font-family: "body_font";
+
+          &:focus {
+            outline: none;
+          }
+        }
+        .top_row {
+          .field_wrap {
+            padding-bottom: 5vw;
+            input {
+              width: 100%;
+            }
+          }
+        }
+        .btm_row {
+          button {
+            margin-top: 3vw;
+            padding: 2vw 4vw;
+            border-radius: 50%;
+            font-family: "body_font";
+            font-size: 1.2vw;
+            border: 2px solid $orange-cl;
+            background-color: $light-cl;
+            color: $orange-cl;
+            transition: all 0.3s ease-in-out;
+            transform: rotate(10deg);
+            span {
+              transform: rotate(-10deg);
+              display: block;
+            }
+            &:hover {
+              background-color: $orange-cl;
+              color: $light-cl;
+              transition: all 0.3s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+    @include mobile {
+      border-bottom: none;
+
+      grid-template-columns: repeat(2, 1fr);
+      .footer_sns {
+        border-right: none;
+      }
+      .footer_contact {
+        border-top: 2px solid;
+        grid-column: 1/3;
+        grid-row: 2;
+        form {
+          overflow: hidden;
+          input {
+            width: 100%;
+          }
+          .top_row {
+            .field_wrap {
+              width: 100%;
+              &:nth-child(1) {
+                margin-right: 3vw;
+              }
+            }
+          }
+
+          .btm_row {
+            button {
+              font-size: 2vw;
+              margin-top: 5vw;
+              margin-bottom: 3vw;
+              padding: 4vw 6vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}

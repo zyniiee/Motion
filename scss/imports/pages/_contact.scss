@@ -1,0 +1,35 @@
+.contact_cover {
+  .contact_details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .contact_detail {
+      padding: calc(90px + 3vw) 3vw 3vw 3vw;
+      border-right: 2px solid $orange-cl;
+      &:last-child {
+        border-right: none;
+      }
+      h4 {
+        padding-bottom: 2vw;
+      }
+      p {
+        padding-bottom: 1vw;
+      }
+    }
+  }
+  .map {
+    border-top: 2px solid $orange-cl;
+  }
+  @include mobile {
+    .contact_details {
+      .contact_detail {
+        padding: calc(50px + 3vw) 3vw 3vw;
+      }
+    }
+    .map {
+      iframe {
+        height: 300px;
+      }
+    }
+  }
+}

@@ -1,0 +1,138 @@
+main {
+  .about_heading {
+    h1 {
+      font-family: "head_font";
+      font-size: 4vw;
+      padding: calc(90px + 3vw) 3vw 3vw 3vw;
+      width: 60%;
+    }
+    &-img {
+      border-top: 2px solid;
+      border-bottom: 2px solid;
+    }
+    .about_cover {
+      display: grid;
+      grid-template-columns: 0.5fr 0.5fr 1fr;
+      border-bottom: 2px solid;
+      &-detail {
+        padding: 3vw;
+        border-left: 2px solid;
+        &:first-child {
+          border: none;
+        }
+      }
+    }
+  }
+  .teams {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    &_details {
+      border-left: 2px solid;
+      &:first-child {
+        border: none;
+      }
+      &-img {
+        height: 25vw;
+        border-bottom: 2px solid;
+        width: 100%;
+      }
+      &-text {
+        padding: 3vw;
+        text-align: center;
+
+        h4 {
+          font-weight: bold;
+          padding-bottom: 1vw;
+        }
+      }
+    }
+  }
+  .contact_us {
+    margin: 3vw;
+    padding: 8vw 10vw;
+    background-color: $orange-cl;
+    color: $light-cl;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    p {
+      padding: 2vw 0 3vw 0;
+      width: 80%;
+    }
+    a {
+      color: $light-cl;
+      padding: 2vw 4vw;
+      border-radius: 50%;
+      border: $light-cl 2px solid;
+      transform: rotate(10deg);
+      transition: all 0.3s ease-in-out;
+      span {
+        transform: rotate(-10deg);
+        display: block;
+      }
+      &:hover {
+        background-color: $light-cl;
+        color: $orange-cl;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+  @include mobile {
+    .about_heading {
+      h1 {
+        font-size: 5vw;
+        padding: calc(50px + 3vw) 3vw 3vw;
+        width: 80%;
+      }
+      &-img {
+        height: 25vh;
+      }
+      .about_cover {
+        grid-template-columns: repeat(2, 1fr);
+        &-detail {
+          &:nth-child(3) {
+            grid-column: 1 / 3;
+            grid-row: 2;
+            border-left: none;
+            border-top: 2px solid;
+          }
+        }
+      }
+    }
+    .teams {
+      grid-template-columns: repeat(2, 1fr);
+      &_details {
+        &-img {
+          height: 40vw;
+          border-bottom: 2px solid;
+          width: 100%;
+        }
+        &:nth-child(3) {
+          border-left: none;
+          border-top: 2px solid;
+        }
+        &:nth-child(4) {
+          border-top: 2px solid;
+        }
+        &-text {
+          padding: 3vw;
+          text-align: center;
+
+          h4 {
+            font-weight: bold;
+            padding-bottom: 1vw;
+          }
+        }
+      }
+    }
+    .contact_us {
+      p {
+        width: 90%;
+        padding-bottom: 4vw;
+      }
+    }
+  }
+}

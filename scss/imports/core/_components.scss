@@ -1,0 +1,52 @@
+.orange_bg {
+  background-color: $orange-cl;
+}
+.white-text {
+  color: $light-cl;
+}
+
+@font-face {
+  font-family: "body_font";
+  src: url("/fonts/worksans-medium-webfont.woff2") format("woff2"),
+    url("/fonts/worksans-medium-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "head_font";
+  src: url("/fonts/CabinetGrotesk-Bold.woff2") format("woff2"),
+    url("/fonts/CabinetGrotesk-Bold.woff") format("woff"),
+    url("/fonts/CabinetGrotesk-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: bold;
+}
+.animate-in {
+  -webkit-animation: fadeIn 0.3s ease-in;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.animate-out {
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

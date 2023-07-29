@@ -1,0 +1,58 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  //font-smooth: antialiased;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+html,
+body {
+  width: 100%;
+  background-color: $light-cl;
+  color: $orange-cl;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  font-family: "body_font";
+  font-size: 1.3vw;
+  line-height: 1.1;
+  position: relative;
+  --pdSection: 50px;
+  display: flex;
+  flex-direction: column;
+  .mainwrapper {
+    width: 100%;
+    margin: auto;
+  }
+  @include desktop {
+  }
+  @include tablet {
+  }
+
+  @include mobile {
+    font-size: 2.5vw;
+    line-height: 1;
+  }
+  h3 {
+    font-family: "head_font";
+    font-size: 3vw;
+    @include mobile {
+      font-size: 5vw;
+    }
+  }
+  h4 {
+    font-size: 2.3vw;
+    font-family: "head_font";
+    @include mobile {
+      font-size: 3.5vw;
+    }
+  }
+  h5 {
+    font-size: 1.2vw;
+    @include mobile {
+      font-size: 2.2vw;
+    }
+  }
+}
